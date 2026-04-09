@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>Smart Grid AI</title>
 
+<!-- ICONS (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     margin: 0;
@@ -12,9 +15,23 @@ body {
     color: white;
 }
 
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.3);
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
 /* HERO */
 .hero {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,62 +39,152 @@ body {
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 55px;
 }
 
 .hero p {
-    margin-top: 10px;
-    font-size: 18px;
-    opacity: 0.8;
+    font-size: 20px;
 }
 
+/* BUTTON */
 .btn {
-    margin-top: 20px;
     padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    background: #00c6ff;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
     color: white;
+    border: none;
     cursor: pointer;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 /* SECTION */
 .section {
     padding: 80px 20px;
     text-align: center;
-    background: #1e293b;
 }
 
+/* CARDS */
 .card {
     display: inline-block;
     background: rgba(255,255,255,0.1);
-    padding: 20px;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 15px;
+    width: 260px;
+}
+
+/* ICON */
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* CONTACT */
+.contact {
+    background: #0f172a;
+    padding: 60px;
+}
+
+/* SOCIAL */
+.social i {
+    font-size: 25px;
     margin: 10px;
-    border-radius: 10px;
-    width: 250px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>⚡ Smart Grid</h2>
     <div>
-        <h1>⚡ Smart Grid AI</h1>
-        <p>Predict electricity load using AI & Machine Learning</p>
-
-        <a href="/login"><button class="btn">Login</button></a>
-        <a href="/signup"><button class="btn">Sign Up</button></a>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
     </div>
 </div>
 
-<div class="section">
-    <h2>Features</h2>
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>⚡ Smart Grid AI</h1>
+        <p>Smart electricity prediction using AI technology</p>
 
-    <div class="card">📊 Load Prediction</div>
-    <div class="card">⚡ Energy Optimization</div>
-    <div class="card">🤖 AI Powered</div>
+        <a href="/login"><button class="btn">Get Started</button></a>
+        <a href="/signup"><button class="btn">Create Account</button></a>
+    </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section">
+    <h2>✨ Features</h2>
+
+    <div class="card">
+        <div class="icon"><i class="fas fa-chart-line"></i></div>
+        Load Prediction
+    </div>
+
+    <div class="card">
+        <div class="icon"><i class="fas fa-bolt"></i></div>
+        Energy Optimization
+    </div>
+
+    <div class="card">
+        <div class="icon"><i class="fas fa-robot"></i></div>
+        AI Powered
+    </div>
+
+    <div class="card">
+        <div class="icon"><i class="fas fa-database"></i></div>
+        Data Analysis
+    </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+    <h2>⚙️ How It Works</h2>
+
+    <div class="card">1️⃣ Enter Data</div>
+    <div class="card">2️⃣ AI Processing</div>
+    <div class="card">3️⃣ Get Prediction</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>📖 About</h2>
+    <p>
+        Smart Grid AI is an advanced system that predicts electricity demand 
+        using machine learning models. It helps in optimizing energy usage 
+        and improving efficiency in power systems.
+    </p>
+</div>
+
+<!-- CONTACT -->
+<div class="contact">
+    <h2>📞 Contact Us</h2>
+
+    <p><i class="fas fa-envelope"></i> smartgrid@email.com</p>
+    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+
+    <div class="social">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-github"></i>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Smart Grid AI | Made with ❤️
 </div>
 
 </body>
