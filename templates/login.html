@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>Login</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     margin: 0;
@@ -15,31 +17,93 @@ body {
     height: 100vh;
 }
 
+/* MAIN BOX */
 .box {
     background: rgba(255,255,255,0.1);
-    padding: 40px;
-    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 20px;
     text-align: center;
     color: white;
-    width: 300px;
+    width: 320px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* INPUT */
 input {
     width: 100%;
     padding: 12px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* BUTTON */
+button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* SOCIAL BUTTONS */
+.social-btn {
+    width: 100%;
+    padding: 10px;
     margin-top: 10px;
     border-radius: 8px;
     border: none;
+    cursor: pointer;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-button {
-    margin-top: 15px;
+/* DIVIDER */
+.divider {
+    margin: 20px 0;
+    opacity: 0.6;
+}
+
+/* LINKS */
+.links {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+/* FOOTER LINKS */
+.footer-links {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
     width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #00c6ff;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.footer-links a {
     color: white;
+    margin: 0 6px;
+    text-decoration: none;
 }
 </style>
 </head>
@@ -47,13 +111,47 @@ button {
 <body>
 
 <div class="box">
-    <h2>Login</h2>
+    <h2>Login to Smart Grid ⚡</h2>
 
     <form method="POST">
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
+
+        <button type="submit">Sign In</button>
     </form>
+
+    <!-- FORGOT PASSWORD -->
+    <div class="links">
+        <a href="#">Forgot Password?</a>
+    </div>
+
+    <div class="divider">or</div>
+
+    <!-- SOCIAL LOGIN -->
+    <button class="social-btn">
+        <i class="fab fa-google"></i>
+        Continue with Google
+    </button>
+
+    <button class="social-btn">
+        <i class="fab fa-apple"></i>
+        Continue with Apple
+    </button>
+
+    <div class="links">
+        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-links">
+    <a href="#">Terms</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Docs</a> |
+    <a href="#">Contact</a> |
+    <a href="#">Support</a> |
+    <a href="#">Manage Cookies</a> |
+    <a href="#">Do Not Share My Info</a>
 </div>
 
 </body>
