@@ -4,60 +4,154 @@
 <meta charset="UTF-8">
 <title>Sign Up</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     margin: 0;
     font-family: 'Segoe UI';
     background: linear-gradient(135deg, #141e30, #243b55);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;   
     height: 100vh;
 }
 
-/* Box */
-.box {
-    background: rgba(255,255,255,0.1);
-    padding: 40px;
-    border-radius: 15px;
-    width: 320px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.3);
     color: white;
-    text-align: center;
 }
 
-/* Inputs */
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    padding: 45px;         
+    border-radius: 20px;
+    width: 380px;          
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
 input {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
     border-radius: 8px;
     border: none;
+    outline: none;
+    box-sizing: border-box;
 }
 
-/* Button */
 button {
     width: 100%;
     padding: 12px;
-    margin-top: 15px;
-    border-radius: 8px;
+    margin-top: 18px;
+    border-radius: 10px;
     border: none;
-    background: #00c6ff;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
     color: white;
     font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Checkbox */
+button:hover {
+    transform: scale(1.05);
+}
+
 .checkbox {
     margin-top: 10px;
     font-size: 14px;
 }
+
+.rule {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.divider {
+    margin: 20px 0;
+    opacity: 0.6;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+.footer-links {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 6px;
+    text-decoration: none;
+}
 </style>
 </head>
 
-<body>
+<body style="font-size:17px;">
+
+<div class="navbar">
+    <h2>⚡ Smart Grid Load Prediction using AI</h2>
+    <div>
+        <a href="/"><i class="fas fa-home"></i> Home</a>
+        <a href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="/signup"><i class="fas fa-user-plus"></i> Signup</a>
+    </div>
+</div>
+
+<div class="container">
 
 <div class="box">
-    <h2>Create Account</h2>
+    <h2>Create Account ⚡</h2>
 
     <form method="POST">
 
@@ -68,6 +162,7 @@ button {
         <input type="tel" name="phone" placeholder="Phone Number">
 
         <input type="password" name="password" placeholder="Password" required>
+        <div class="rule">Password must be at least 6 characters</div>
 
         <input type="password" name="confirm" placeholder="Confirm Password" required>
 
@@ -75,10 +170,37 @@ button {
             <input type="checkbox" required> I agree to Terms & Conditions
         </div>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit">Create Account</button>
 
     </form>
 
+    <div class="divider">or</div>
+
+    <button class="social-btn">
+        <i class="fab fa-google"></i>
+        Continue with Google
+    </button>
+
+    <button class="social-btn">
+        <i class="fab fa-apple"></i>
+        Continue with Apple
+    </button>
+
+    <div class="links">
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+</div>
+
+</div>
+
+<div class="footer-links">
+    <a href="#">Terms</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Docs</a> |
+    <a href="#">Contact</a> |
+    <a href="#">Support</a> |
+    <a href="#">Manage Cookies</a> |
+    <a href="#">Do Not Share My Info</a>
 </div>
 
 </body>
